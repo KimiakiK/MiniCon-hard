@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name MiniCon)(type KiCad)(uri ${KIPRJMOD}/MiniCon.pretty)(options "")(descr ""))
+)

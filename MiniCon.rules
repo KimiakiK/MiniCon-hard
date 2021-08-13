@@ -1,0 +1,84 @@
+
+(rules PCB MiniCon
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 5219)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.1)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.9)
+    )
+  )
+  (rule
+    (width 203.2)
+    (clear 203.4)
+    (clear 101.6 (type smd_to_turn_gap))
+    (clear 50.8 (type smd_smd))
+  )
+  (padstack "Via[0-1]_609.6:304.8_um"
+    (shape
+      (circle F.Cu 609.6 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 609.6 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_609.6:304.8_um" "Via[0-1]_609.6:304.8_um" default
+  )
+  (via 
+    "Via[0-1]_609.6:304.8_um-kicad_default" "Via[0-1]_609.6:304.8_um" "kicad_default"
+  )
+  (via_rule
+    default "Via[0-1]_609.6:304.8_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_609.6:304.8_um-kicad_default"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 203.2)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    "/PAD_R" "/PAD_L" GND "Net-(C1-Pad1)" "Net-(C2-Pad1)" +5V +3V3 "Net-(C6-Pad1)"
+    +3V0 "OSC32_IN" "OSC32_OUT" "Net-(D1-Pad2)" "Net-(D2-Pad2)" "LED_STATUS" "Net-(D3-Pad2)" "Net-(F1-Pad1)"
+    "Net-(F1-Pad2)" "Net-(J1-Pad4)" "USB_DP" "USB_DM" "SW_A" "SW_B" "SW_C" "SW_D"
+    "POS_H" "POS_V" NRST SWCLK SWDIO "TFT_RESET" "TFT_SDA" "TFT_SCL"
+    "TFT_CS" "TFT_DC" "Net-(J4-Pad3)" "TFT_LEDK" "Net-(LS1-Pad1)" "Net-(Q1-Pad1)" "SW_L" "SW_R"
+    "TFT_LED" BUZZER GPIO "Net-(U1-Pad4)" "Net-(U1-Pad6)" "Net-(U2-Pad4)" "Net-(U2-Pad6)" "Net-(U3-Pad10)"
+    "Net-(U3-Pad8)" "RTC_SDA" "Net-(U3-Pad6)" "RTC_SCL" "Net-(U4-Pad3)" "Net-(U6-Pad2)" "Net-(U6-Pad5)" "Net-(U6-Pad6)"
+    "Net-(U6-Pad13)" "Net-(U6-Pad20)" "Net-(U6-Pad21)" "Net-(U6-Pad22)" "Net-(U6-Pad25)" "Net-(U6-Pad28)" "Net-(U6-Pad29)" "Net-(U6-Pad31)"
+    "Net-(U6-Pad38)" "Net-(U6-Pad44)"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 203.2)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)

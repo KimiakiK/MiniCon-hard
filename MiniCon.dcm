@@ -1,0 +1,28 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP NJM2864F03
+D Positive 100mA Linear Regulator, Fixed Output 3V, SOT-23-5
+K Voltage Regulator 100mA Positive 3V
+$ENDCMP
+#
+$CMP NJM2884U1
+D Positive 500mA Linear Regulator, Fixed Output 3.3V, SOT-89-5
+K Voltage Regulator 500mA Positive 3.3V
+$ENDCMP
+#
+$CMP RX8900CE
+D Real Time Clock Module
+K RTC
+$ENDCMP
+#
+$CMP STM32L4P5CGT6
+D ARM Cortex-M4 MCU, 1MB flash, 320KB RAM, 120MHz, LQFP-48
+K ARM Cortex-M4 STM32L4 STM32L4P5
+$ENDCMP
+#
+$CMP TTP223
+D 1 KEY TOUCH PAD DETECTOR IC
+K TOUCH PAD
+$ENDCMP
+#
+#End Doc Library
